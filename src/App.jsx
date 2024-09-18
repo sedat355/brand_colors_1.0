@@ -8,7 +8,7 @@ function App() {
     <div className="app">
       <aside className="aside">
         <Sidebar/>
-        <SocialIcons/>
+        {/* <SocialIcons/> */}
       </aside>
 
       <main className="main">
