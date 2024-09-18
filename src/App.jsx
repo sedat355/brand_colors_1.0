@@ -6,12 +6,12 @@ import SocialIcons from "./components/SocialIcons"
 function App() {
   return(
     <div className="app">
-      <aside>
+      <aside className="aside">
         <Sidebar/>
         <SocialIcons/>
       </aside>
 
-      <main>
+      <main className="main">
         <Header/>
         <Content/>
       </main>
