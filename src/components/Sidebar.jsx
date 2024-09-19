@@ -1,6 +1,17 @@
+import {useState} from "react"
+import Modal from "./Modal"
+
 function Sidebar() {
+  const [isOpenModal, setIsOpenModal] = useState(false)
+
+ 
+  const handleOpenModal = () => {
+    setIsOpenModal(true)
+  }
+
   return (
     <div className="sidebar">
+      {isOpenModal && <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}/>}
       <div className="logo-container">
         <img
           className="logo-img"
@@ -15,7 +26,9 @@ function Sidebar() {
       <div className="sidebar-links">
         <div className="text-links">
           <a>Suggest a Brand</a>
-          <a>About BrandColors</a>
+          <a
+            onClick={handleOpenModal}
+          >About BrandColors</a>
         </div>
 
         <div>
