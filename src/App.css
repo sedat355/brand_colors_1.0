@@ -145,6 +145,7 @@ a:visited {
  column-gap: .5rem;
 }
 .right-side {
+  display: none;
 }
 .search-input {
   border: none;
@@ -182,11 +183,38 @@ a:visited {
 .download-icon {
   width: 30px;
   height: 30px;
-
 }
-/* ! SIDEBAR STYLES ---------------------------*/
+@media (width >= 652px) {
+  .right-side {
+    display: flex;
+  }
+}
+/* ! CONTENT STYLES ---------------------------*/
 .content {
-  padding: 1rem;
+  padding-left: 1rem;
+}
+.color-list {
+  display: flex;
+  flex-direction: column;
+}
+.brand-color-box {
+  padding-block: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.brand-name {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.colors {
+  display: flex;
+  column-gap: 10px;
+}
+.color {
+  min-width: 40px;
+  min-height: 40px;
+  cursor: pointer;
 }
 
 /* ! MEDIA QUERY STYLES ---------------------------*/
