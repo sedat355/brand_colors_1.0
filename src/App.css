@@ -129,12 +129,60 @@ a:visited {
 .main {
   
 }
-/* ! SIDEBAR STYLES ---------------------------*/
+/* ! HEADER STYLES ---------------------------*/
 .header {
   height: 60px;
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.left-side, .right-side, .all-brands {
+ display: flex; 
+ align-items: center;
+ justify-content: center;
+ column-gap: .5rem;
+}
+.right-side {
+}
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.search-input::placeholder {
+  color: rgba(0,0,0, 0.3);
+  font-weight: bold;
+}
+.search-icon {
+  width: 30px;
+  height: 30px;
+}
+.brands-collected {
+  color: #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  padding-inline: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+.collected-icon {
+  width: 24px;
+  height: 24px;
+}
+.all-brands {
+  color: rgba(96, 125, 139, 0.7);
+}
+.all-brands:hover {
+  color: rgba(96, 125, 139, 1);
+  cursor: pointer;
+}
+.download-icon {
+  width: 30px;
+  height: 30px;
+
 }
 /* ! SIDEBAR STYLES ---------------------------*/
 .content {
