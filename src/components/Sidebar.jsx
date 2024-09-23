@@ -88,9 +88,9 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      {
+      {/* {
         screenWidth >= 1024 && <SocialIcons/>
-      }
+      } */}
     </div>
   )
 }
