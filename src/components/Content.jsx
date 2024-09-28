@@ -17,8 +17,8 @@ function Content() {
                 //   border: `1px solid #${color}`,
                 // }}
                 style={{
-                  "--bg-color": `#${color}`,
-                  "--br-color": `#${color}`,
+                  "--bg-color": '#' + color,//veya `#${color}`
+                  "--br-color": color !== "ffffff" ? `#${color}` : '#d0d2d3',
                 }}
               ></li>
             )
