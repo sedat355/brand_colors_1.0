@@ -1,21 +1,15 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Modal from "./Modal"
 import SocialIcons from "./SocialIcons"
+import useWindowDimensions from "../hooks/use-window-dimensions"
 
 function Sidebar() {
-  const [isOpenModal, setIsOpenModal] = useState(false)
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const [ isOpenModal, setIsOpenModal ] = useState(false)
+  const { screenWidth } = useWindowDimensions();
 
   const handleOpenModal = () => {
     setIsOpenModal(true)
   }
-
-  useEffect(() => {
-    const handleResize = () => setScreenWidth(window.innerWidth)
-    window.addEventListener("resize", handleResize)
-
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
 
   return (
     <div className="sidebar">

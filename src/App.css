@@ -292,7 +292,10 @@ a:visited {
   min-width: 40px;
   min-height: 40px;
   cursor: pointer;
+  background-color: var(--bg-color);
+  border: 1px solid var(--br-color);
 }
+/* ! MEDIA QUERY STYLES ---------------------------*/
 @media (width >= 652px) {
   .header {
     position: sticky;
@@ -308,12 +311,14 @@ a:visited {
   .colors {
     flex-wrap: wrap;
   }
+  .color {
+    min-width: 60px;
+  }
   .brand-name {
     min-width: 120px;
     margin-block: auto;
   }
 }
-/* ! MEDIA QUERY STYLES ---------------------------*/
 @media (width >= 1024px) {
   .app {
     flex-direction: row;

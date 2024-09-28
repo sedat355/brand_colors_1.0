@@ -1,6 +1,7 @@
 import BrandsData from "../brands-data.json"
 
 function Content() {
+
   const renderedBrands = Object.entries(BrandsData).map(([key, objValue]) => {
     return (
       <li className="brand-color-box" key={key}>
@@ -11,9 +12,13 @@ function Content() {
               <li
                 className="color"
                 key={ind}
+                // style={{
+                //   backgroundColor: `#${color}`,
+                //   border: `1px solid #${color}`,
+                // }}
                 style={{
-                  backgroundColor: `#${color}`,
-                  border: `1px solid #${color}`,
+                  "--bg-color": `#${color}`,
+                  "--br-color": `#${color}`,
                 }}
               ></li>
             )
