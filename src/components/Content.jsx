@@ -12,14 +12,14 @@ function Content() {
               <li
                 className="color"
                 key={ind}
-                // style={{
-                //   backgroundColor: `#${color}`,
-                //   border: `1px solid #${color}`,
-                // }}
                 style={{
                   "--bg-color": '#' + color,//veya `#${color}`
                   "--br-color": color !== "ffffff" ? `#${color}` : '#d0d2d3',
                 }}
+                // style={{
+                //   backgroundColor: `#${color}`,
+                //   border: `1px solid #${color}`,
+                // }}
               ></li>
             )
           })}
