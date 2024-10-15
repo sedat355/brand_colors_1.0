@@ -1,30 +1,11 @@
 import BrandsData from "../brands-data.json"
+import Brand from "./Brand"
 
 function Content() {
 
   const renderedBrands = Object.entries(BrandsData).map(([key, objValue]) => {
     return (
-      <li className="brand-color-box" key={key}>
-        <span className="brand-name">{key}</span>
-        <ul className="colors">
-          {objValue.colors.map((color, ind) => {
-            return (
-              <li
-                className="color"
-                key={ind}
-                style={{
-                  "--bg-color": '#' + color,//veya `#${color}`
-                  "--br-color": color !== "ffffff" ? `#${color}` : '#d0d2d3',
-                }}
-                // style={{
-                //   backgroundColor: `#${color}`,
-                //   border: `1px solid #${color}`,
-                // }}
-              ></li>
-            )
-          })}
-        </ul>
-      </li>
+      <Brand key={key} brandName={key} objValue={objValue}/>
     )
   })
 

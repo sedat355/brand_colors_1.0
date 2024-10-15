@@ -283,11 +283,22 @@ a:visited {
   padding-block: 1rem;
   border-bottom: 1px solid #e0e0e0;
 }
+.brand-color-box.selectedBrand {
+  
+}
+
 .brand-name {
   font-size: 20px;
   display: inline-block;
   margin-bottom: 5px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 10px;
+}
+.brand-name > svg {
+  color: #00a4e4;
 }
 .colors {
   display: flex;
@@ -300,6 +311,11 @@ a:visited {
   background-color: var(--bg-color);
   border: 1px solid var(--br-color);
 }
+.brand-color-box.selectedBrand > .colors > .color {
+  flex:1;
+
+}
+
 /* ! MEDIA QUERY STYLES ---------------------------*/
 @media (width >= 652px) {
   .header {
@@ -342,4 +358,17 @@ a:visited {
     position: sticky;
     top: 0px;
   }
+  .brand-color-box {
+    position: relative;
+  }
+  .brand-name > svg {
+    position: absolute;
+    left: -30px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+  }
+
 }
