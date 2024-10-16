@@ -1,6 +1,9 @@
 import {useContext} from "react"
 import {MainContext} from "../contexts/use-main-context"
 import { FaCheck } from "react-icons/fa";
+import { IoCopyOutline } from "react-icons/io5";
+import ClipboardButton from 'react-clipboard.js';
+import { getContrastYIQ } from "../helpers/contrast";
 
 const Brand = ({brandName, objValue}) => {
   const { selectedBrands, setSelectedBrands } = useContext(MainContext);
@@ -26,14 +29,19 @@ const Brand = ({brandName, objValue}) => {
         <ul className="colors">
           {objValue.colors.map((color, ind) => {
             return (
-              <li
+              <ClipboardButton
                 className="color"
                 key={ind}
                 style={{
                   "--bg-color": '#' + color,//veya `#${color}`
                   "--br-color": color !== "ffffff" ? `#${color}` : '#d0d2d3',
+                  "--text-color": `${getContrastYIQ(color)}`
                 }}
-              ></li>
+                component="li"
+                data-clipboard-text={color}
+              >
+               {color}
+              </ClipboardButton>
             )
           })}
         </ul>
